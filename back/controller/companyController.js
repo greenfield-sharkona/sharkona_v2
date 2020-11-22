@@ -6,7 +6,7 @@ const Client = require('../model/clientSchema').Client;
 const auth = require("./auth")
 
 
-//this schema to validate data from the client before saved it in database  
+//this schema to validate data from the org before saved it in database  
 const companySchema = joi.object({
   name: joi.string().min(6).required(),
   email: joi.string().min(6).required().email(),
@@ -20,7 +20,7 @@ const loginSchema = joi.object({
   password: joi.string().min(6).required(),
 
 });
-//this signup method for post requeset from client to save data in database 
+//this signup method for post requeset from org to save data in database 
 exports.signup = async (req, res) => {
   // this validate methode to check the requirement data
   //console.log(req.body)
@@ -36,7 +36,7 @@ exports.signup = async (req, res) => {
   // to hashPassword to be more secure
   const salt = await bcrypt.genSalt(10)
   const hashPassword = await bcrypt.hash(req.body.password, salt)
-  //make make new document(client) in mongoDB 
+  //make make new document(org) in mongoDB 
   const company = new Company({
     name: req.body.name,
     email: req.body.email,
@@ -49,7 +49,7 @@ exports.signup = async (req, res) => {
   //console.log(company)
 
   try {
-    //save document(client) in mongoDB
+    //save document(org) in mongoDB
     const savedCompany = await company.save();
     const token = jwt.sign({ _id: company._id }, process.env.TOKEN);
     console.log(company)
@@ -66,7 +66,7 @@ exports.signup = async (req, res) => {
 
 exports.signin = async (req, res) => {
   //res.send("sing in page");
-  //to check if data from user is correct or not
+  //to check if data from org is correct or not
   const { error } = loginSchema.validate(req.body);
   if (error) res.send(error.details[0].message);
   //check if email exist or not in database collection
