@@ -56,11 +56,10 @@ Client-side | Server-side
 --- | ---
 axios: ^0.15.3 | bcrypt-nodejs: ^0.0.3
 babel-preset-stage-1: ^6.1.18|body-parser: ^1.15.2
-lodash: ^3.10.1 | jwt-simple: ^0.5.1
 react: ^16.2.0 | dotenv: ^2.0.0
 react-dom: ^16.2.0 | express: ^4.14.0
 react-router-dom: ^4.2.2 | mongoose: ^4.7.4
-
+jwt-simple: ^0.5.1 | 
 
 # Screenshots of this project
 
