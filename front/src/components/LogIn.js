@@ -15,10 +15,12 @@ class Login extends Component {
     this.handleChangeInput=this.handleChangeInput.bind(this)
 
   }
+
   handleChangeInput(e) {
     this.setState({ [e.target.name]: e.target.value })
   }
 
+  //take the data from state to back by endpoint ('/signinClient')
   handelOnClick = async (e) => {
     e.preventDefault();
     // console.log("ourCLient", this.state)
@@ -28,15 +30,7 @@ class Login extends Component {
       })
     }
     
-  // handelOnclick =async (e)=>{
-  //   e.preventDefault();
-  //   // console.log("ourCLient", this.state)
-  //   axios.post('/signinClient' , this.state)
-  //     .then((response)=>{
-        
-  //       console.log(this.state.email)
-  //     })
-  // }
+
   render() {
 
     return (
