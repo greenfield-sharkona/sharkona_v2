@@ -21,6 +21,7 @@ class Signup extends Component {
     axios.post("/signupClient", this.state)
       .then((response) => {
         console.log(response)
+      //after signup save the the token(login) and userid in local storage 
         localStorage.setItem('login', response.data.token)
         localStorage.setItem('userId', response.data.userId)
 
