@@ -9,7 +9,9 @@ exports.addEvent = async (req, res) => {
   const event = new Event({
     name: req.body.name,
     startDate: req.body.startDate,
+    startTime : req.body.startTime,
     endDate: req.body.endDate,
+    endTime:req.body.endTime,
     location: req.body.location,
     phoneNumber: req.body.phoneNumber,
     clients:[]

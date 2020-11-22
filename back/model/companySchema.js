@@ -26,9 +26,7 @@ const companySchema = mongoose.Schema({
     },phoneNumber:{
         type : String
      },
-    events :[{
-        type : mongoose.Schema.Types.ObjectId ,
-         ref:"eventSchema"}]
+     isOrg:{type:Boolean}
 })
 
 

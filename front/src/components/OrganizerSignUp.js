@@ -1,6 +1,34 @@
 import React, { Component } from "react"
 
 export class OrganizerSignUp extends Component {
+    state = {
+        name: '',
+        password: '',
+        email: '',
+        location: '',
+        phoneNumber: '',
+    }
+    handleChangeInput = (e) => {
+      let {name,value} = e.target ;
+      this.setState({ [name]:value })
+      // console.log(e.target)
+    }
+    signup = (e)=>{
+      e.preventDefault();
+      axios.post("/signupCompany",this.state)
+        .then((response)=>{
+        console.log(response)
+          })
+          this.setState({
+            name: '',
+            password: '',
+            email: '',
+            location: '',
+            phoneNumber: '',
+          })
+        
+        }
+  
     render() {
         return (
             <form>

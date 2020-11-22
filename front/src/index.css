@@ -11,3 +11,82 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+/* .page-section{
+  height: 100vh;
+} */
+
+
+#contact{
+  height: 120vh;
+}
+
+.location{
+  width: 600px;
+  margin-left: 275px;
+
+
+}
+
+.col-md-6-phone{
+  width: 600px !important;
+  margin-left: 275px !important;
+
+}
+
+
+.eventPage{
+  /* background-image:url(./assets/img/main4-bg.jpg); */
+  /* background-attachment: fixed !important;  */
+  /* background-color: rgb(166, 35, 170);
+  height: auto; */
+
+  background: url(./assets/img/main4-bg.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  display: flex !important;
+  margin: auto !important;
+};
+
+.row{
+  justify-content: center !important;
+}
+
+li{
+  list-style: none;
+}
+
+.wellcom{
+  font-size: 15px !important;
+  color: rgba(249, 252, 87, 0.719) !important;
+  font-family:serif !important;
+  
+}
+
+.forEvent{
+  color: white !important;
+  font-size:40px !important ;
+  margin-top:0 !important ;
+  margin-bottom:15px !important}
+
+  .pEvent{
+    font-size: 15px !important;
+    color: rgb(10, 10, 10) !important;
+    /* font-family:cursive !important; */
+  }
+
+.clockStyle{
+  width: 35px !important;
+  height: 35px !important;
+}
+
+.cardstyle{
+  width: 400px !important;
+  height: 500px !important;
+}
+/* #cardEv{
+  width: 350 !important;
+  height: 350px !important;
+
+} */
