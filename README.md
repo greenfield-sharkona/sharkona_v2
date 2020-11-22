@@ -4,6 +4,7 @@
 <p align="center">
  MERN is a fullstack implementation in MongoDB, Expressjs, React, Nodejs.
 </p>
+
 ## clone or download
 ```terminal
 $ https://github.com/greenfield-sharkona/sharkona_v2
@@ -31,6 +32,7 @@ front/
 
 
 ## Front-side usage(PORT: 3000)
+
 ```terminal
 $ cd front   // go to front folder
 $ npm i       // npm install pacakges
@@ -48,6 +50,7 @@ $ npm start
 ```
 
 # Dependencies(tech-stacks)
+
 Client-side | Server-side
 --- | ---
 axios: ^0.15.3 | bcrypt-nodejs: ^0.0.3
