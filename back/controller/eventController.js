@@ -31,7 +31,7 @@ exports.addEvent = async (req, res) => {
 
 
 }
-
+//delete One event from database 
 exports.deleteEvent = async(req, res)=> {
   let _id = req.params.id
   console.log(_id)
@@ -42,7 +42,7 @@ exports.deleteEvent = async(req, res)=> {
   .catch((err) => res.status(404).json({success:false}))
 };
 
-
+//delete all event from database 
 exports.delete = async (req, res)=> {
   Event.deleteMany()
       .exec( (err, deletedEvents) => {
@@ -51,7 +51,7 @@ exports.delete = async (req, res)=> {
       } )
 };
 
-
+//get One event from database 
 exports.retrieveOneEvent = async (req,res)=> {
   try{
    const event = await Event.findById(req.params.id)
@@ -60,7 +60,7 @@ exports.retrieveOneEvent = async (req,res)=> {
    res.send('Error' , err)
   } 
 }
-
+//get all event from database 
 exports.retrieveEvent = function (req, res) {
   Event.find()
       .exec( (err,events) => {
@@ -70,6 +70,7 @@ exports.retrieveEvent = function (req, res) {
 
 };
 
+//edit the one event using id  
 exports.updateEvent =  async(req, res) =>{
   let _id = req.params.id
   
