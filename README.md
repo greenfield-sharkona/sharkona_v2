@@ -1,15 +1,14 @@
 <h1 align="center">
-🌐 MERN Stack
+📅 MERN Stack
 </h1>
 <p align="center">
  MERN is a fullstack implementation in MongoDB, Expressjs, React, Nodejs.
 </p>
 
 ## clone or download
-
+- note: you need to fix name of login file.
 ```terminal
 $ https://github.com/greenfield-sharkona/sharkona_v2
-$ npm i
 ```
 
 ## project structure
