@@ -106,12 +106,13 @@ exports.signin = async (req, res) => {
   //console.log(token);
 
 }
+//to logout from the his account 
 exports.clientlogout = (req, res) => {
   res.cookie('login', '')
   res.status(200).send(req.client);
 }
 
-
+//this middileware
 exports.auth = (req, res) => {
   res.json({
     id: req.client._id,
