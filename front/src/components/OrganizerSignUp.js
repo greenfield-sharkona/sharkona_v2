@@ -19,6 +19,7 @@ export class OrganizerSignUp extends Component {
         .then((response)=>{
         console.log(response)
           })
+        //to make the input box empty after click the button 
           this.setState({
             name: '',
             password: '',
