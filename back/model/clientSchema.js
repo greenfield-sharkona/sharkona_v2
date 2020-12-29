@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-
+//solve contributer
 const clientSchema = mongoose.Schema({
 
     name: {
